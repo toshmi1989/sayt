@@ -1,0 +1,692 @@
+<!doctype html>
+<html lang="ru">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="theme-color" content="#0B3B60" />
+    <meta name="format-detection" content="telephone=no" />
+
+    <title>Доктор Шохрух Рамазанов | Травматолог-ортопед высшей категории</title>
+    <meta
+      name="description"
+      content="Запись на приём к опытному травматологу-ортопеду. Современные методы лечения суставов, артроскопия, реабилитация."
+    />
+
+    <!-- Open Graph -->
+    <meta
+      property="og:title"
+      content="Доктор Шохрух Рамазанов | Травматолог-ортопед"
+    />
+    <meta
+      property="og:description"
+      content="Современные методы лечения травм и заболеваний суставов. Запись на приём онлайн."
+    />
+    <meta
+      property="og:image"
+      content="https://images.unsplash.com/photo-1612349317150-e413f6a5b16d?auto=format&fit=crop&q=80&w=1200"
+    />
+    <meta property="og:type" content="website" />
+
+    <!-- Preconnect for fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap"
+      rel="stylesheet"
+    />
+
+    <!-- Main CSS -->
+    <link rel="stylesheet" href="css/style.css" />
+
+    <!-- Schema.org -->
+    <script type="application/ld+json">
+      {
+        "@context": "https://schema.org",
+        "@type": "Physician",
+        "medicalSpecialty": "Orthopedic",
+        "name": "Шохрух Рамазанов",
+        "description": "Травматолог-ортопед высшей категории, стаж 15 лет.",
+        "image": "assets/images/doctor.jpg",
+        "telephone": "+998 90 323 99 00",
+        "address": {
+          "@type": "PostalAddress",
+          "streetAddress": "ул. Катта Козиробод, 71",
+          "addressLocality": "Ташкент",
+          "addressCountry": "UZ"
+        },
+        "priceRange": "$$"
+      }
+    </script>
+  </head>
+  <body>
+    <!-- Page Reveal Overlay -->
+    <div class="page-reveal-overlay" id="pageReveal"></div>
+
+    <!-- Soft Noise Overlay -->
+    <div class="noise-overlay"></div>
+
+    <!-- Scroll Progress Bar -->
+    <div class="scroll-progress-bar" id="scrollProgress"></div>
+
+    <!-- Sticky Header -->
+    <header class="main-header" id="mainHeader">
+      <div class="container header-container">
+        <div class="logo">
+          <span class="logo-text">Dr. Ramazanov</span>
+          <span class="logo-spec">Ортопед</span>
+        </div>
+        <nav class="main-nav">
+          <a href="#about" class="nav-link">О враче</a>
+          <a href="#services" class="nav-link">Услуги</a>
+          <a href="#reviews" class="nav-link">Отзывы</a>
+          <a href="#bookingSection" class="nav-link">Контакты</a>
+        </nav>
+        <button
+          class="btn btn-outline nav-cta"
+          onclick="document.getElementById('bookingSection').scrollIntoView()"
+          aria-label="Перейти к форме записи"
+        >
+          Записаться
+        </button>
+      </div>
+    </header>
+
+    <main>
+      <!-- Hero Section -->
+      <section class="hero" id="hero">
+        <div class="container hero-inner">
+          <div class="hero-content stagger-animate">
+            <span class="badge">Высшая категория</span>
+            <h1 class="hero-title">Верну радость<br />движения без боли</h1>
+            <p class="hero-subtitle">
+              Современное лечение травм и заболеваний суставов с фокусом на
+              быстрое восстановление и минимальную травматичность.
+            </p>
+            <div class="hero-actions">
+              <button
+                class="btn btn-primary"
+                onclick="
+                  document.getElementById('bookingSection').scrollIntoView()
+                "
+                aria-label="Записаться на прием"
+              >
+                Записаться на приём
+              </button>
+              <a
+                href="tel:+998903239900"
+                class="btn btn-secondary"
+                aria-label="Позвонить врачу"
+                >Позвонить</a
+              >
+            </div>
+
+            <!-- Trust Badges (Glassmorphism) -->
+            <div class="trust-badges-wrapper">
+              <div class="trust-badge glass">
+                <span class="trust-number count-up" data-target="15">0</span
+                ><span class="trust-plus">+</span>
+                <span class="trust-label">лет опыта</span>
+              </div>
+              <div class="trust-badge glass">
+                <span class="trust-number count-up" data-target="5000">0</span
+                ><span class="trust-plus">+</span>
+                <span class="trust-label">пациентов</span>
+              </div>
+              <div class="trust-badge glass">
+                <span class="trust-icon">
+                  <svg
+                    width="24"
+                    height="24"
+                    viewBox="0 0 24 24"
+                    fill="none"
+                    stroke="currentColor"
+                    stroke-width="2"
+                  >
+                    <path d="M22 11.08V12a10 10 0 1 1-5.93-9.14" />
+                    <polyline points="22 4 12 14.01 9 11.01" />
+                  </svg>
+                </span>
+                <span class="trust-label">Современные<br />методы</span>
+              </div>
+            </div>
+          </div>
+
+          <div class="hero-image-wrapper stagger-animate">
+            <div class="radial-glow"></div>
+            <img
+              src="assets/images/doctor.jpg"
+              alt="Портрет врача"
+              class="floating-portrait"
+            />
+          </div>
+        </div>
+      </section>
+
+      <!-- Trust Block (Doctor Details) -->
+      <section class="trust-details" id="about">
+        <div class="container trust-inner stagger-animate">
+          <div class="trust-text">
+            <h2 class="section-title">Обо мне</h2>
+            <p class="section-text">
+              Моя философия — не просто лечить, а восстанавливать качество
+              жизни. Я применяю международные протоколы с доказанной
+              эффективностью, избегая лишних назначений.
+            </p>
+            <ul class="trust-list">
+              <li>Ежегодные стажировки в клиниках Европы</li>
+              <li>Работающая система реабилитации после травм</li>
+              <li>Экспертный подход к эндопротезированию</li>
+            </ul>
+            <div class="signature-block">
+              <p class="signature-name">Рамазанов Ш. А.</p>
+              <p class="signature-role">Оперирующий хирург-ортопед</p>
+            </div>
+          </div>
+          <div class="trust-photo">
+            <img
+              src="https://images.unsplash.com/photo-1551076805-e1869043e560?auto=format&fit=crop&q=80&w=800"
+              alt="Врач в операционной"
+              class="action-photo"
+              loading="lazy"
+            />
+            <div class="athlete-badge glass">
+              <svg
+                width="20"
+                height="20"
+                viewBox="0 0 24 24"
+                fill="none"
+                stroke="currentColor"
+                stroke-width="2"
+              >
+                <path
+                  d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"
+                />
+              </svg>
+              <span>Доверяют профессиональные спортсмены</span>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- Sticky Conversion Strip -->
+      <div class="sticky-conversion-strip" id="stickyStrip" aria-hidden="true">
+        <div class="container strip-inner">
+          <div class="strip-text">
+            <span class="strip-icon">📅</span>
+            <p>Есть свободные окна на этой неделе</p>
+          </div>
+          <button
+            class="btn btn-primary btn-sm"
+            onclick="document.getElementById('bookingSection').scrollIntoView()"
+            aria-label="Быстрая запись"
+          >
+            Записаться
+          </button>
+        </div>
+      </div>
+
+      <!-- Services Section -->
+      <section class="services section-padding" id="services">
+        <div class="container">
+          <div class="section-header stagger-animate">
+            <h2 class="section-title">Направления лечения</h2>
+            <p class="section-subtitle">
+              Диагностика и лечение полного спектра ортопедических заболеваний.
+            </p>
+          </div>
+
+          <div class="services-grid">
+            <!-- Service Card 1 -->
+            <div class="service-card shadow-base stagger-animate">
+              <div class="service-icon">
+                <svg
+                  width="32"
+                  height="32"
+                  viewBox="0 0 24 24"
+                  fill="none"
+                  stroke="currentColor"
+                  stroke-width="2"
+                  class="feather"
+                >
+                  <circle cx="12" cy="12" r="10" />
+                  <path d="M12 8v8" />
+                  <path d="M8 12h8" />
+                </svg>
+              </div>
+              <h3 class="service-title">Артроскопия коленного сустава</h3>
+              <p class="service-desc">
+                Малоинвазивное лечение разрывов мениска, крестообразных связок и
+                повреждений хряща.
+              </p>
+              <button class="btn-text">Подробнее &rarr;</button>
+            </div>
+            <!-- Service Card 2 -->
+            <div class="service-card shadow-base stagger-animate">
+              <div class="service-icon">
+                <svg
+                  width="32"
+                  height="32"
+                  viewBox="0 0 24 24"
+                  fill="none"
+                  stroke="currentColor"
+                  stroke-width="2"
+                  class="feather"
+                >
+                  <path d="M22 12h-4l-3 9L9 3l-3 9H2" />
+                </svg>
+              </div>
+              <h3 class="service-title">Спортивная травматология</h3>
+              <p class="service-desc">
+                Лечение травм у профессиональных спортсменов и любителей
+                активного отдыха.
+              </p>
+              <button class="btn-text">Подробнее &rarr;</button>
+            </div>
+            <!-- Service Card 3 -->
+            <div class="service-card shadow-base stagger-animate">
+              <div class="service-icon">
+                <svg
+                  width="32"
+                  height="32"
+                  viewBox="0 0 24 24"
+                  fill="none"
+                  stroke="currentColor"
+                  stroke-width="2"
+                  class="feather"
+                >
+                  <rect x="2" y="7" width="20" height="14" rx="2" ry="2" />
+                  <path d="M16 21V5a2 2 0 0 0-2-2h-4a2 2 0 0 0-2 2v16" />
+                </svg>
+              </div>
+              <h3 class="service-title">Эндопротезирование</h3>
+              <p class="service-desc">
+                Замена тазобедренного и коленного суставов современными
+                имплантами мировых брендов.
+              </p>
+              <button class="btn-text">Подробнее &rarr;</button>
+            </div>
+            <!-- Service Card 4 -->
+            <div class="service-card shadow-base stagger-animate">
+              <div class="service-icon">
+                <svg
+                  width="32"
+                  height="32"
+                  viewBox="0 0 24 24"
+                  fill="none"
+                  stroke="currentColor"
+                  stroke-width="2"
+                  class="feather"
+                >
+                  <path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z" />
+                </svg>
+              </div>
+              <h3 class="service-title">Консервативное лечение</h3>
+              <p class="service-desc">
+                Медикаментозные блокады, PRP-терапия, введение гиалуроновой
+                кислоты.
+              </p>
+              <button class="btn-text">Подробнее &rarr;</button>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- Reviews Section -->
+      <section class="reviews section-padding" id="reviews">
+        <div class="container reviews-container">
+          <div class="reviews-left stagger-animate">
+            <h2 class="section-title">Что говорят пациенты</h2>
+            <div class="rating-huge">
+              <span class="rating-score">4.9</span>
+              <div class="rating-stars">
+                <!-- 5 Stars SVG -->
+                <svg
+                  width="24"
+                  height="24"
+                  viewBox="0 0 24 24"
+                  fill="currentColor"
+                  class="star"
+                >
+                  <path
+                    d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"
+                  />
+                </svg>
+                <svg
+                  width="24"
+                  height="24"
+                  viewBox="0 0 24 24"
+                  fill="currentColor"
+                  class="star"
+                >
+                  <path
+                    d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"
+                  />
+                </svg>
+                <svg
+                  width="24"
+                  height="24"
+                  viewBox="0 0 24 24"
+                  fill="currentColor"
+                  class="star"
+                >
+                  <path
+                    d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"
+                  />
+                </svg>
+                <svg
+                  width="24"
+                  height="24"
+                  viewBox="0 0 24 24"
+                  fill="currentColor"
+                  class="star"
+                >
+                  <path
+                    d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"
+                  />
+                </svg>
+                <svg
+                  width="24"
+                  height="24"
+                  viewBox="0 0 24 24"
+                  fill="currentColor"
+                  class="star"
+                >
+                  <path
+                    d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"
+                  />
+                </svg>
+              </div>
+            </div>
+            <p class="review-meta-text">
+              На основе 120 отзывов на ПроДокторов и Яндекс.Картах
+            </p>
+            <div class="slider-controls">
+              <button class="slider-arrow prev" aria-label="Предыдущий отзыв">
+                &larr;
+              </button>
+              <button class="slider-arrow next" aria-label="Следующий отзыв">
+                &rarr;
+              </button>
+            </div>
+          </div>
+
+          <div class="reviews-right stagger-animate">
+            <div class="reviews-slider" id="reviewsSlider">
+              <div class="slider-track" id="sliderTrack">
+                <!-- Slide 1 -->
+                <div class="slide active">
+                  <div class="slide-content shadow-elevated">
+                    <p class="review-text">
+                      "После травмы колена думал, что спорт для меня закрыт. Шохрух Акбарович провел ювелирную артроскопию. Через полгода я уже снова на склоне. Огромное спасибо за профессионализм!"
+                    </p>
+                    <div class="review-author">
+                      <div class="author-avatar placeholder-avatar"></div>
+                      <div class="author-info">
+                        <span class="author-name">Михаил С.</span>
+                        <span class="author-date">Апрель 2025</span>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <!-- Slide 2 -->
+                <div class="slide">
+                  <div class="slide-content shadow-elevated">
+                    <p class="review-text">
+                      "Обратилась с болью в тазобедренном суставе. Понравилось,
+                      что не стали сразу предлагать операцию, а расписали
+                      поэтапный план консервативного лечения. Боль ушла. Очень
+                      грамотный подход."
+                    </p>
+                    <div class="review-author">
+                      <div class="author-avatar placeholder-avatar"></div>
+                      <div class="author-info">
+                        <span class="author-name">Елена В.</span>
+                        <span class="author-date">Март 2025</span>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- Clinic Gallery Section -->
+      <section class="gallery section-padding bg-alt">
+        <div class="container">
+          <div class="section-header stagger-animate">
+            <h2 class="section-title">Современная клиника</h2>
+            <p class="section-subtitle">
+              Оборудование экспертного класса и комфорт на каждом этапе.
+            </p>
+          </div>
+          <div class="gallery-grid">
+            <div
+              class="gallery-item stagger-animate"
+              data-caption="Reception Area"
+            >
+              <img
+                src="https://images.unsplash.com/photo-1519494026892-80bbd2d6fd0d?auto=format&fit=crop&q=80&w=800"
+                alt="Reception"
+                loading="lazy"
+              />
+              <div class="gallery-overlay">
+                <span class="zoom-icon">Отрыть</span>
+              </div>
+            </div>
+            <div
+              class="gallery-item stagger-animate"
+              data-caption="Consultation Room"
+            >
+              <img
+                src="https://images.unsplash.com/photo-1551076805-e1869043e560?auto=format&fit=crop&q=80&w=800"
+                alt="Consultation Room"
+                loading="lazy"
+              />
+              <div class="gallery-overlay">
+                <span class="zoom-icon">Отрыть</span>
+              </div>
+            </div>
+            <div
+              class="gallery-item stagger-animate"
+              data-caption="Treatment Unit"
+            >
+              <img
+                src="https://images.unsplash.com/photo-1505751172876-fa1923c5c528?auto=format&fit=crop&q=80&w=800"
+                alt="Treatment Unit"
+                loading="lazy"
+              />
+              <div class="gallery-overlay">
+                <span class="zoom-icon">Отрыть</span>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- Booking Section -->
+      <section class="booking-section section-padding" id="bookingSection">
+        <div
+          class="container booking-container shadow-elevated stagger-animate"
+        >
+          <div class="booking-info">
+            <h2 class="section-title">Запись на консультацию</h2>
+            <p class="section-text">
+              Оставьте заявку, и администратор подберет удобное время для визита
+              в клинику.
+            </p>
+            <ul class="contact-list">
+              <li>
+                <svg
+                  width="24"
+                  height="24"
+                  viewBox="0 0 24 24"
+                  fill="none"
+                  stroke="currentColor"
+                  stroke-width="2"
+                >
+                  <path
+                    d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"
+                  />
+                </svg>
+                <a href="tel:+998903239900">+998 90 323 99 00</a>
+              </li>
+              <li>
+                <svg
+                  width="24"
+                  height="24"
+                  viewBox="0 0 24 24"
+                  fill="none"
+                  stroke="currentColor"
+                  stroke-width="2"
+                >
+                  <path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z" />
+                  <circle cx="12" cy="10" r="3" />
+                </svg>
+                г. Ташкент, ул. Катта Козиробод, 71 (NEO MED CARDIO)
+              </li>
+            </ul>
+            <div class="map-wrapper" style="margin-top: 2rem; border-radius: 16px; overflow: hidden; box-shadow: var(--shadow-base);">
+              <p style="margin-bottom: 8px; font-weight: 600; font-size: 1rem; color: var(--text-dark);">Как добраться:</p>
+              <iframe src="https://yandex.uz/map-widget/v1/?ll=69.219595%2C41.267097&mode=search&oid=153944674298&ol=biz&z=17" width="100%" height="250" frameborder="0" allowfullscreen="true" style="display: block; border-radius: 12px; border: none;"></iframe>
+            </div>
+          </div>
+          <div class="booking-form-wrapper">
+            <form id="bookingForm" class="booking-form">
+              <div class="form-group">
+                <label for="name">Ваше имя</label>
+                <input
+                  type="text"
+                  id="name"
+                  name="name"
+                  required
+                  placeholder="Иван"
+                />
+              </div>
+              <div class="form-group">
+                <label for="phone">Телефон</label>
+                <input
+                  type="tel"
+                  id="phone"
+                  name="phone"
+                  required
+                  placeholder="+998 __ ___ __ __"
+                />
+              </div>
+              <div class="form-group">
+                <label for="comment">Кратко о проблеме (необязательно)</label>
+                <textarea
+                  id="comment"
+                  name="comment"
+                  rows="3"
+                  placeholder="Что вас беспокоит?"
+                ></textarea>
+              </div>
+              <button type="submit" class="btn btn-primary btn-block">
+                Подтвердить запись
+              </button>
+            </form>
+            <div id="formSuccess" class="form-success hidden">
+              <svg
+                width="48"
+                height="48"
+                viewBox="0 0 24 24"
+                fill="none"
+                stroke="var(--emerald)"
+                stroke-width="2"
+              >
+                <path d="M22 11.08V12a10 10 0 1 1-5.93-9.14" />
+                <polyline points="22 4 12 14.01 9 11.01" />
+              </svg>
+              <h3>Заявка отправлена!</h3>
+              <p>
+                Мы свяжемся с вами в течение 15 минут для подтверждения времени.
+              </p>
+            </div>
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <!-- Trust Footer -->
+    <footer class="main-footer">
+      <div class="container footer-inner">
+        <div class="footer-col">
+          <span class="logo-text">Dr. Ramazanov</span>
+          <p class="footer-text">
+            <strong>Клиника NEO MED CARDIO</strong><br>
+            г. Ташкент, ул. Катта Козиробод, 71
+          </p>
+        </div>
+        <div class="footer-col footer-trust">
+          <p>Лицензия: ЛО-77-01-000000</p>
+          <p>ИНН: 770123456789</p>
+          <p>&copy; 2026 Все права защищены</p>
+        </div>
+      </div>
+    </footer>
+
+    <!-- Floating Telegram Button -->
+    <a
+      href="https://t.me/Endospine9900"
+      class="floating-tg"
+      aria-label="Написать в Telegram"
+      target="_blank"
+      rel="noopener"
+    >
+      <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+        <line x1="22" y1="2" x2="11" y2="13"></line>
+        <polygon points="22 2 15 22 11 13 2 9 22 2"></polygon>
+      </svg>
+    </a>
+
+    <!-- Sticky Mobile CTA -->
+    <div class="mobile-sticky-cta">
+      <button
+        class="btn btn-primary btn-block pulse-animation"
+        onclick="document.getElementById('bookingSection').scrollIntoView()"
+      >
+        Записаться на прием
+      </button>
+    </div>
+
+    <!-- Exit Intent Modal -->
+    <div class="modal exit-modal" id="exitModal" aria-hidden="true">
+      <div class="modal-dialog shadow-elevated">
+        <button class="modal-close" id="closeExitModal" aria-label="Закрыть">
+          &times;
+        </button>
+        <h3 class="modal-title">Не откладывайте здоровье<br />на потом!</h3>
+        <p class="modal-text">
+          Получите профессиональную консультацию ортопеда уже сегодня, это
+          первый шаг к жизни без боли.
+        </p>
+        <button
+          class="btn btn-primary btn-block"
+          onclick="
+            document.getElementById('bookingSection').scrollIntoView();
+            document.getElementById('exitModal').classList.remove('active');
+          "
+        >
+          Записаться на приём
+        </button>
+      </div>
+    </div>
+
+    <!-- Lightbox -->
+    <div class="lightbox" id="lightbox" aria-hidden="true">
+      <button class="lightbox-close" aria-label="Закрыть галерею">
+        &times;
+      </button>
+      <button class="lightbox-nav prev">&larr;</button>
+      <img src="" alt="Gallery Image" class="lightbox-img" />
+      <div class="lightbox-caption"></div>
+      <button class="lightbox-nav next">&rarr;</button>
+    </div>
+
+    <!-- Scripts -->
+    <script src="js/main.js" defer></script>
+  </body>
+</html>
