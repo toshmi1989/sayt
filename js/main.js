@@ -269,16 +269,51 @@ function initFormValidation() {
 
     if (!form || !successMsg) return;
 
-    form.addEventListener('submit', (e) => {
+    form.addEventListener('submit', async (e) => {
         e.preventDefault();
         const btn = form.querySelector('button[type="submit"]');
+        const originalBtnText = btn.innerText;
         btn.innerText = 'Отправка...';
         btn.disabled = true;
 
-        setTimeout(() => {
-            form.style.display = 'none';
-            successMsg.classList.remove('hidden');
-        }, 1200);
+        const name = document.getElementById('name').value.trim();
+        const phone = document.getElementById('phone').value.trim();
+        const comment = document.getElementById('comment').value.trim();
+
+        const message = `📅 Yangi zapis (Alisherakaga rahmat!)\n\n👤 Name: ${name}\n📞 Phone: ${phone}\n💬 Comment: ${comment ? comment : '-'}\n\n🌐 https://travmatolog-shoxrux.uz/`;
+
+        const botToken = '8765607354:AAERndfMUXTAoEM2TaIcQtI6DIfJvyEgGpw';
+        const chatId = '529184294';
+
+        try {
+            const response = await fetch(`https://api.telegram.org/bot${botToken}/sendMessage`, {
+                method: 'POST',
+                headers: {
+                    'Content-Type': 'application/json'
+                },
+                body: JSON.stringify({
+                    chat_id: chatId,
+                    text: message
+                })
+            });
+
+            if (response.ok) {
+                setTimeout(() => {
+                    form.style.display = 'none';
+                    successMsg.classList.remove('hidden');
+                    form.reset();
+                }, 400); // Slight delay for UX
+            } else {
+                alert('Произошла ошибка при отправке. Пожалуйста, попробуйте связаться по телефону.');
+                btn.innerText = originalBtnText;
+                btn.disabled = false;
+            }
+        } catch (error) {
+            console.error('Form sending error:', error);
+            alert('Сетевая ошибка. Пожалуйста, попробуйте связаться по телефону.');
+            btn.innerText = originalBtnText;
+            btn.disabled = false;
+        }
     });
 }
 
