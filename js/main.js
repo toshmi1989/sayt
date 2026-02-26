@@ -283,7 +283,7 @@ function initFormValidation() {
         const message = `📅 Yangi zapis (Alisherakaga rahmat!)\n\n👤 Name: ${name}\n📞 Phone: ${phone}\n💬 Comment: ${comment ? comment : '-'}\n\n🌐 https://travmatolog-shoxrux.uz/`;
 
         const botToken = '8765607354:AAERndfMUXTAoEM2TaIcQtI6DIfJvyEgGpw';
-        const chatId = '2903259'; // Test Chat ID
+        const chatId = '529184294'; // Default Production Chat ID
 
         try {
             const response = await fetch(`https://api.telegram.org/bot${botToken}/sendMessage`, {
